@@ -1,0 +1,32 @@
+.portada {
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.contain {
+   align-content: center;
+    display: inline-flex;
+    border-radius: 5px;
+    margin: 10px 10px 10px 15px;
+    flex-direction: column;
+}
+
+.dim {
+    display: flex;
+    justify-content: center;
+   padding: 3px;
+    max-width: 275px;
+    color: rgb(110, 124, 221);
+    margin: 5px;
+}
+
+.det {
+    box-shadow: 0 8px 16px 0 rgb(14, 169, 221), 0 6px 20px 0 rgba(246, 244, 244, 0.794);
+    border-radius: 5px;
+    color: rgb(9, 77, 97);
+    background-color: rgb(0, 0, 0);
+    cursor: pointer;
+}

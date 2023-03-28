@@ -1,0 +1,13 @@
+.contain{ 
+  display: flex;
+  justify-content: center;
+  margin-top: 2%;
+  
+}
+.select {
+    color: #219bec;
+    background-color: var(--bg-color);
+    border: 2px solid #e8edee;
+    cursor: pointer;
+    border-radius: 5px;
+}
