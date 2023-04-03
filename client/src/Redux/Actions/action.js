@@ -17,7 +17,7 @@ export const BORRARCACHEDETAIL = "BORRARCACHEDETAIL";
 export const get_videogames = () => {
   return async function (dispatch) {
     try {
-      const response = await axios.get("http://localhost:3001/videogames");
+      const response = await axios.get("/videogames");
       const videogames = response.data;
       dispatch({
         type: GET_VIDEOGAMES,
@@ -37,7 +37,7 @@ export const filtrarXVideogame = (name) => {
   return async function (dispatch) {
     try {
       const response = await axios.get(
-        `http://localhost:3001/videogames?name=${name}`
+        `/videogames?name=${name}`
       );
       const videogames = response.data;
 
@@ -57,7 +57,7 @@ export const filtrarXVideogame = (name) => {
 export const filtrarXGenero = () => {
   return async function (dispatch) {
     try {
-      const response = await axios.get("http://localhost:3001/genre");
+      const response = await axios.get("/genre");
       const genres = response.data;
 
       dispatch({
@@ -97,7 +97,7 @@ export const setearBD_api = (value) => {
 export const get_detail = (id) => {
   return async function (dispatch) {
     try {
-      const response = await axios.get(`http://localhost:3001/videogame/${id}`);
+      const response = await axios.get(`/videogame/${id}`);
       const detail = response.data;
 
       return dispatch({
@@ -124,7 +124,7 @@ export const post_videogames = (input) => {
   return async function (dispatch) {
     try {
       const juegoC = await axios.post(
-        `http://localhost:3001/videogames`,
+        `/videogames`,
         input
       );
       return dispatch({
@@ -145,7 +145,7 @@ export const delete_game = (id) => {
   return async function (dispatch) {
     try {
       const borrado = await axios.delete(
-        `http://localhost:3001/videogame/${id}`
+        `/videogame/${id}`
       );
       return dispatch({
         type: DELETE,

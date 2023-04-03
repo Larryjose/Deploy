@@ -17,18 +17,18 @@
 //     =====`-.____`.___ \_____/___.-`___.-'=====
 //                       `=---='
 //     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-const server = require('./src/app.js');
-const { ApiGenero } = require('./src/Controllers/genereControl.js');
-const { ApiGame } = require('./src/Controllers/videogameControl.js');
-const { conn } = require('./src/db.js');
-
+const server = require("./src/app.js");
+const { ApiGenero } = require("./src/Controllers/genereControl.js");
+const { ApiGame } = require("./src/Controllers/videogameControl.js");
+const { conn } = require("./src/db.js");
+require("dotenv").config();
 // Syncing all the models at once.
 conn.sync({ force: true }).then(() => {
-  server.listen(3001, async () => {
-    console.log('%s listening at 3001')
+  server.listen(process.env.PORT, async () => {
+    console.log("%s listening at", process.env.PORT);
     //   await ApiGame();
     //  console.log("se levanto la base de videogames")
-    await ApiGenero()
+    await ApiGenero();
     console.log("se levanto la base de generos");
 
     // eslint-disable-line no-console
