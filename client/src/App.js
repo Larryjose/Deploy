@@ -7,7 +7,7 @@ import DetailGame from "./Component/DetailGame/DetailGame";
 import About from "./Component/About/About";
 import { Route } from "react-router-dom";
 import axios from "axios";
-axios.defaults.baseURL = 'http://localhost:3001/';
+axios.defaults.baseURL = 'https://deploy-production-2ace.up.railway.app/';
 
 function App() {
   return (
